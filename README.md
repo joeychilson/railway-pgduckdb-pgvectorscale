@@ -5,6 +5,7 @@ A Docker container combining pg_duckdb and pgvectorscale extensions for PostgreS
 ## Features
 
 This container includes:
+
 - **PostgreSQL 17** - Latest major version
 - **pg_duckdb** (v1.0.0) - DuckDB integration for analytical queries
 - **pgvector** (v0.8.1) - Vector similarity search
@@ -14,7 +15,7 @@ This container includes:
 
 ### Deploy on Railway
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/r7H2vw?referralCode=NhCCIt&utm_medium=integration&utm_source=template&utm_campaign=generic)
 
 ### Local Docker Build
 
@@ -29,12 +30,15 @@ docker run -d \
 ## Environment Variables
 
 ### PostgreSQL Variables
+
 - `POSTGRES_PASSWORD` - Database password (required)
 - `POSTGRES_USER` - Database user (default: postgres)
 - `POSTGRES_DB` - Database name (default: postgres)
 
 ### S3 Configuration (Optional)
+
 Configure S3 access for DuckDB:
+
 - `S3_ACCESS_KEY_ID` - AWS access key ID
 - `S3_SECRET_ACCESS_KEY` - AWS secret access key
 - `S3_REGION` - AWS region
@@ -43,9 +47,11 @@ Configure S3 access for DuckDB:
 - `S3_URL_STYLE` - S3 URL style: 'path' or 'vhost' (default: path)
 
 ### DuckDB Extensions (Optional)
+
 - `DUCKDB_EXTENSIONS` - Comma-separated list of DuckDB extensions to install
 
 Example:
+
 ```bash
 DUCKDB_EXTENSIONS=httpfs,parquet,json
 ```
